@@ -12,6 +12,7 @@ TARGET_CPU_VARIANT := generic
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := ossi
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Board configs
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=mtk androidboot.usbcontroller=extcon.usb video=vfb:640x400,bpp=32,memsize=3072000 service_locator.enable=1 printk.devkmsg=on firmware_class.path=/vendor/firmware
@@ -43,6 +44,7 @@ BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_SUPER_PARTITION_SIZE := 7730906700
 BOARD_MAIN_SIZE := 7730906700
 BOARD_MAIN_PARTITION_LIST := system odm vendor product
+TARGET_SUPPORTS_64_BIT_APPS := true
 
 # Prebuilt files
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
@@ -87,7 +89,6 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_NO_EXFAT_FUSE := true
 TW_Y_OFFSET := 142
 TW_H_OFFSET := -142
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.usb0/lun.0/file"
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone17/temp
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 365
